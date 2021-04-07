@@ -32,7 +32,7 @@ body{
 }
 .btn{
     background-color:rgb(1, 12, 12);
-    border: 1px solid black;
+    border: 3px solid black;
     padding: 5px 10px;
     color: white;
     outline: none;
@@ -40,5 +40,5 @@ body{
 
 }
 .btn:hover{
-    border-color: white;
+    border-color: red;
 }
