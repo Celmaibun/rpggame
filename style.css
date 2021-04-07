@@ -6,7 +6,7 @@ body{
     text-align: center;
     font-size: 25px;
     font-weight: 400;
-    font-stretch:extra-condensed;
+    font-stretch:expanded;
     padding: 0;
     margin: 0;
     display: flex;
@@ -41,4 +41,11 @@ body{
 }
 .btn:hover{
     border-color: red;
+}
+span{
+    opacity: 0;
+    transition: all 0.4 ease;
+}
+span.fade{
+    opacity: 1;
 }

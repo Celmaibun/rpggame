@@ -1,6 +1,7 @@
 const textElement = document.getElementById('text');
 const optionButtonsElement = document.getElementById('option-buttons');
 
+
 let state = {};
 
 
@@ -12,6 +13,30 @@ function startGame(){
 function showTextNode(textNodeIndex){
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text
+    const strText = textElement.textContent;
+const splitText = strText.split("");
+textElement.textContent = "";
+for(let i=0; i < splitText.length; i++){
+    textElement.innerHTML += `<span>${splitText[i]}</span>`
+}
+let char = 0;
+let timer = setInterval(onTick, 20);
+
+
+function onTick(){
+    const span = textElement.querySelectorAll('span')[char];
+    span.classList.add('fade');
+    char++;
+    if(char === splitText.length){
+        complete();
+        return;
+    }
+}
+
+function complete(){
+    clearInterval(timer);
+    timer = null;
+}
     while(optionButtonsElement.firstChild){
         optionButtonsElement.removeChild(optionButtonsElement.firstChild)
     }
@@ -132,7 +157,7 @@ const textNodes = [
         '- noo w dobrym tempie za 3-4 dni będziesz mieć efekt\r\r'+
         '- Szybciej niż się spodziewałem\r\r'+
         '- Mówiłem ci, giełda to dynamiczna kobieta, nie lubi stać w miejscu, ale nie raz cię jeszcze wyrucha\r\r'+
-        '- eee..ok?\r\r\r'+
+        '- eee..ok?\r\r'+
         '- Dobra to teraz idę się zająć gotowaniem, wiesz.. muriatic acid i takie tam, znasz się na chemii?',
         options: [
             {
@@ -160,7 +185,7 @@ const textNodes = [
     {
         id: 9,
         text: '- W sumie brzmi sensownie, kuźwa jak syczy, powinno być tak?\r\r'+
-        '- Mówię przecież, że musi dojść do reakcji\r\r\r'+
+        '- Mówię przecież, że musi dojść do reakcji\r\r'+
         '- Dobra kurwa, pierwszy raz to gotuję...o jest git, dobra dzięki, bo się bałem, że spierdolę. Dobra to widzimy się jutro, pamiętaj być punktualnie, bo szef wpadnie to musi być wszystko ideolo.\r'
         ,
         options: [
@@ -310,4 +335,7 @@ const textNodes = [
         text: '. Przypomina ci się, że Wiktor uczył cię inwestowania, więc wyciągasz telefon i sprawdzasz ile zarobiłeś. Patrzysz na saldo w portfelu…”-50% w ciągu ostatniego tygodnia”..masz na koncie ledwo 250zł i kwota ciągle spada. Krótko mówiąc jesteś w czarnej dupie i właśnie pod kamienicę podjechał samochód, który za chwilę zabierze twoje zwłoki na małą wycieczkę'
     },
 ]
+
+
+
 startGame();
