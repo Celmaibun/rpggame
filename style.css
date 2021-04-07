@@ -28,7 +28,7 @@ body{
  display: grid;
  grid-template-columns: repeat(1, auto);
  gap: 10px;
- margin-top: 20px;
+ margin-top: 80px;
 }
 .btn{
     background-color:rgb(1, 12, 12);
