@@ -141,14 +141,58 @@ const textNodes = [
             } 
         ]
     },
+    //////////////////////////////////////////////////////////////////
     {
         id: 8,
         text: 'No to świetnie, bo mam tutaj problem, co się dodaje po muratic acid, bo nie mogę znaleźć tej cholernej listy, a za godzinę muszę mieć gotową partię',
         options: [
             {
-                text: 'Jasne, zawsze się interesowałem chemią',
-                nextText: 8,
+                text: 'Proste, dodajesz Caustic Soda, żeby rozpocząć reakcję jonizowania struktur chlorku sodu z kwasem, dzięki czemu reakcja zajdzie szybciej, bo potrzebujesz substancji aktywnej',
+                nextText: 9,
+            },
+            {
+                text: 'Dodaj calcium acetate, bez katalizatora nic nie zrobisz, a wyjebie ci całą partie',
+                nextText: 10,
             } 
+        ]
+    },
+    ////////////////////////////////////////////////////////////////////
+    {
+        id: 9,
+        text: '-W sumie brzmi sensownie, kuźwa jak syczy, powinno być tak?\r'+
+        '-Mówię przecież, że musi dojść do reakcji\r'+
+        '-Dobra kurwa, pierwszy raz to gotuję...o jest git, dobra dzięki, bo się bałem, że spierdolę. Dobra to widzimy się jutro, pamiętaj być punktualnie, bo szef wpadnie to musi być wszystko ideolo.\r'
+        ,
+        options: [
+            {
+                text: 'Do następnego!',
+                nextText: 11,
+            },
+            {
+                text: 'Dobra spierdalaj',
+                nextText: 11,
+            },
+        ]
+    },
+
+    
+    {
+        id: 10,
+        text: '-Hmm...No skoro tak mówisz...Ty, a powinno to się tak kopcić?\r'+
+        '-No..zachodzi reakcja katalizacji i teraz się łączą obie substancje\r'+
+        '-Kurwa jak jebie, ja pierdole cała partia w pizdu, zobacz jak to dymi skurwysyństwo!\r'+
+        '-Nie o to ci chodziło?\r'+
+        '-kurwa ja tu mete gotuję, a dym czarny jak twoja stara gdy wraca z piwnicy niosąc węgiel\r'+
+        '-Chciałeś pomocy to ci powiedziałem co i jak\r'+
+        '- I żałuję, bo cała partia w pizdu, dobra zejdź mi z oczu, muszę wykombinować jak to teraz naprawić, bo mnie zajebią chłopaki…\r'+
+        '-To kiedy się widzimy?\r'+
+        '-Za tydzień jak zawsze, bądź punktualnie, albo nie przychodź wcale, bo pewnie nie dożyję następnego tygodnia dzięki tobie..\r'
+        ,
+        options: [
+            {
+                text: 'Nie mam bladego pojęcia o czym mówisz',
+                nextText: 100,
+            },
         ]
     }
 ]
