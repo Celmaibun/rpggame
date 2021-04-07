@@ -120,13 +120,36 @@ const textNodes = [
             },
             {
                 text: 'Hmm.. BTC jest stabilne, nie ma co ryzykować, lepszy mały zysk niż duża strata',
-                nextText: 8,
+                nextText: 7,
             }
             
         ]
+    },
+    {
+        id: 7,
+        text: '-Dobra, to przelejj 500zł i lecimy dalej\r' +
+        '- em...Dobra już, to kiedy mogę liczyć na zysk?\r' +
+        '- noo w dobrym tempie za 3-4 dni będziesz mieć efekt\r'+
+        '-Szybciej niż się spodziewałem\r'+
+        '-Mówiłem ci, giełda to dynamiczna kobieta, nie lubi stać w miejscu, ale nie raz cię jeszcze wyrucha\r'+
+        '-eee..ok?\r\r\r'+
+        '- Dobra to teraz idę się zająć gotowaniem, wiesz.. muriatic acid i takie tam, znasz się na chemii?',
+        options: [
+            {
+                text: 'Jasne, zawsze się interesowałem chemią',
+                nextText: 8,
+            } 
+        ]
+    },
+    {
+        id: 8,
+        text: 'No to świetnie, bo mam tutaj problem, co się dodaje po muratic acid, bo nie mogę znaleźć tej cholernej listy, a za godzinę muszę mieć gotową partię',
+        options: [
+            {
+                text: 'Jasne, zawsze się interesowałem chemią',
+                nextText: 8,
+            } 
+        ]
     }
 ]
-
-
-
 startGame();
